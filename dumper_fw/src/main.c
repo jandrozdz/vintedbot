@@ -16,7 +16,7 @@
 
 #define FLASH_BASE   0x00000000UL
 #define FLASH_SIZE   (192U * 1024U)   /* 192 KB */
-#define CHUNK        200U             /* well under typical MTU after negotiation */
+#define CHUNK        20U              /* MTU=23 → 20 bytes usable per notification */
 
 static struct bt_conn *g_conn;
 static volatile bool   g_dump;
